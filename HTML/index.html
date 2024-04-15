@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de gastos</title>
+
+    <script src="../JAVASCRIPT/functionality.js"></script>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <section id="filtros" class="whiteCont">
+       <!-- <h2>Saldo</h2>
+        <div id="saldos">
+            
+        <div id="saldo">
+            <h3>Inicial</h3>
+            <p>1500</p>
+        </div>
+
+        <div id="saldo restante">
+            <h3>Restante</h3>
+            <p>500</p>
+        </div>
+    </div>-->
+    <h1>Control de gastos</h1>
+    <div class="filterDates">
+    
+    <section id="filtrado">
+        <div>
+        <p for="dateFilter">Fecha inicial</p>
+        <input id="initialDate" onchange="filterDates()" type="date">
+    </div>
+
+    <div>
+        <p for="dateFilter">Fecha final</p>
+    <input id="finalDate" onchange="filterDates()" type="date">
+</div>
+    </section>
+    
+</div>
+    </section>
+<div id="sectionsBody">
+    
+    <!--FORM-->
+    <section id="addExpense">
+        <div class="whiteCont">
+            <form id="formulario" onsubmit="saveData(event)">
+                <!--ADD TASK-->
+                <label>Nuevo Gasto</label>
+                <input id="nameExpense" type="text" placeholder="Añade el nombre o proposito de un gasto"/>
+
+                 <!--ADD AMOUNT-->
+                 <label>Monto</label>
+                 <input id="amountExpense" type="number" placeholder="00.00"/>
+
+                 <!--ADD DATE-->
+                 <label>Fecha</label>
+                 <input id="dateExpense" type="date"/>
+
+                 <!--SUBMIT-->
+                 
+                 <button id="register" class="buttonStyle" type="submit"> Registrar gasto </button>
+            </form>
+        </div>
+    </section>
+
+    <!--LIST-->
+    <section id="expenseList">
+        <div id="listado">
+            
+        </div>
+    </section>
+    <button id="cleanAll" onclick="cleanAll()"><img src="../broom.png"/></button>
+</div>
+</body>
+</html>
